@@ -23,7 +23,7 @@ Esta é uma Fan Page interativa inspirada na interface (UI) do jogo **Persona 4 
 
 ## 🔗 Link para Acesso
 Você pode visualizar o projeto online através do GitHub Pages:
-👉 [Visitar Persona 4 Golden Fan Page](https://rodrigopbarros.github.io/Persona-4-Golden/)
+👉 [Visitar Persona 4 Golden Fan Page]([https://rodrigopbarros.github.io/Persona-4-Golden/](https://rodrigopbarros.github.io/persona4G-landing-page/))
 
 ---
 
