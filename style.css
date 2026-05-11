@@ -1,207 +1,426 @@
 :root {
-    --bg: #0b0f1a;
-    --surface: #121826;
-    --text: #e5e7eb;
-    --text-soft: #9ca3af;
-
-    --primary: #facc15; /* Amarelo Persona */
-    --accent: #7c3aed; /* Roxo */
-    --hover: #fde047;
-
-    --radius: 12px;
+    --p4-yellow: #facc15;
+    --p4-dark: #0a0f1f;
+    --p4-black: #050505;
+    --p4-white: #ffffff;
 }
 
+/* CHARACTER COLORS */
+.yu { --char-color: #facc15; }
+.yosuke { --char-color: #f97316; }
+.chie { --char-color: #22c55e; }
+.yukiko { --char-color: #ef4444; }
+.kanji { --char-color: #3b82f6; }
+.rise { --char-color: #ec4899; }
+.teddie { --char-color: #06b6d4; }
+.naoto { --char-color: #8b5cf6; }
 
-.yu { --char-color: #facc15; }     /* amarelo */
-.yosuke { --char-color: #f97316; } /* laranja */
-.chie { --char-color: #22c55e; }   /* verde */
-.yukiko { --char-color: #ef4444; } /* vermelho */
-.kanji { --char-color: #3b82f6; }  /* azul */
-.rise { --char-color: #ec4899; }   /* rosa */
-.teddie { --char-color: #06b6d4; } /* ciano */
-.naoto { --char-color: #8b5cf6; }  /* roxo */
+/* CORES DOS PERSONAGENS (Secundários) */
+.dojima { --char-color: #64748b; }   
+.nanako { --char-color: #fb7185; }   
+.marie { --char-color: #a855f7; }    
+.adachi { --char-color: #ef4444; }   
+.namatame { --char-color: #fbbf24; }
+.mitsuo { --char-color: #4ade80; }   
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(180deg, #0b0f1a, #090d16);
-    color: var(--text);
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--p4-dark);
+    color: var(--p4-white);
     line-height: 1.6;
-    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* HEADER */
+.tv-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    background-size: 100% 3px, 3px 100%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
 header {
-    text-align: center;
-    padding: 30px 20px 10px;
+    background: var(--p4-yellow);
+    padding: 20px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-    color: var(--primary);
-    font-size: 2rem;
-}
-
-/* NAV */
-.nav {
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: black;
+    font-weight: 900;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
     gap: 20px;
-    margin-top: 10px;
 }
 
 .nav a {
     text-decoration: none;
-    color: var(--text-soft);
-    padding: 6px 10px;
+    color: black;
+    font-weight: 900;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--p4-black);
     transition: 0.3s;
 }
 
-.nav a:hover {
-    color: var(--primary);
-    transform: translateY(-2px);
+.nav a:hover::after {
+    width: 100%;
 }
 
-/* MAIN */
-main {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* HERO */
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-
-    padding: 60px 20px;
+    gap: 50px;
+    padding: 80px 20px;
 }
 
 .hero-texto h2 {
-    font-size: 2.8rem;
-    color: #fff;
-    font-weight: bold;
+    font-size: 4rem;
+    color: var(--p4-yellow);
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+.btn-yellow {
+    background: var(--p4-yellow);
+    color: black;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border: 4px solid black;
+    display: inline-block;
+    transition: 0.2s;
+    transform: skew(-10deg);
+    margin-top: 20px;
+}
+
+.btn-yellow:hover {
+    background: white;
+    transform: skew(-10deg) scale(1.1);
+    box-shadow: 8px 8px 0px var(--p4-black);
+}
+
+.hero-img-wrapper img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 5px solid var(--p4-yellow);
+    box-shadow: 0 0 30px rgba(250, 204, 21, 0.3);
+    object-fit: cover;
+}
+
+.sobre {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sobre-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border: 1px solid var(--p4-yellow);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--p4-yellow);
+    font-size: 2.5rem;
+}
+
+.grid-personagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CENTER FLEX FOR SECONDARIES */
+.center-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card,
+.card-secundario {
+    background: #121826;
+    border: 3px solid transparent;
+    padding: 20px;
+    text-align: center;
+    transition: 0.4s;
+    flex: 1 1 250px;
+    max-width: 280px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--char-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+                0 0 20px var(--char-color);
+}
+
+.card img,
+.card-secundario img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.arcana { 
+    background: var(--p4-black); 
+    color: var(--char-color, var(--p4-yellow)); 
+    border: 2px solid var(--char-color, var(--p4-yellow));
+    font-weight: 900; 
+    font-style: italic; 
+    display: inline-block; 
+    padding: 4px 15px; 
+    margin-bottom: 15px;
+    text-transform: uppercase; 
+    font-size: 0.8rem;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover .arcana {
+    box-shadow: 0 0 10px var(--char-color);
+    background: var(--char-color);
+    color: var(--p4-black);
+}
+
+.card-secundario {
+    background: #121826;
+    border: 3px solid transparent;
+    padding: 20px;
+    text-align: center;
+    transition: 0.4s;
+    flex: 1 1 250px;
+    max-width: 280px;
+}
+
+.card-secundario:hover {
+    transform: translateY(-10px);
+    border-color: var(--char-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px var(--char-color);
+}
+
+.card:hover .arcana, 
+.card-secundario:hover .arcana {
+    background: var(--char-color);
+    color: var(--p4-black);
+    box-shadow: 0 0 15px var(--char-color);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.galeria-grid img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: 0.4s;
+    border: 4px solid transparent;
+}
+
+.galeria-grid img:hover {
+    filter: brightness(1);
+    transform: scale(1.05);
+    border-color: var(--p4-yellow);
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid #1f2a3a;
+    margin-top: 50px;
+}
+
+footer a {
+    color: var(--p4-yellow);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-texto h2 {
+        font-size: 2.5rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* =========================
+   HERO ANIMATION (CUTSCENE)
+========================= */
+
+.hero-texto h2 {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
 }
 
 .hero-texto p {
-    color: var(--primary);
-    margin-top: 10px;
+    animation: fadeUp 1s ease-out 0.2s forwards;
+    opacity: 0;
 }
 
-.hero img {
-    width: 240px;
-    border-radius: 50%;
-    border: 3px solid var(--primary);
+.hero-btns {
+    animation: fadeUp 1.2s ease-out 0.4s forwards;
+    opacity: 0;
 }
 
-/* PERSONAGENS GRID */
-.personagens-principais {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    padding: 60px 20px;
+.hero-img-wrapper img {
+    animation: heroPop 1.2s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.9);
 }
 
-/* CARD */
-.personagem {
-    background: linear-gradient(145deg, #121826, #0d1320);
-    padding: 20px;
-    border-radius: var(--radius);
-    text-align: center;
+/* ANIMAÇÕES */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes heroPop {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+/* PERSONAGEM - GAME FEEL */
+
+/* hover mais responsivo e "selecionável" */
+.card,
+.card-secundario {
     position: relative;
     overflow: hidden;
-
-    transition: 0.3s;
-
-    border: 2px solid transparent;
 }
 
-/* IMAGEM */
-.personagem img {
-    width: 100%;
-    height: 260px;
-    object-fit: contain;
-    margin-top: 10px;
-}
-
-/* TEXTO */
-.personagem h3 {
-    margin-bottom: 5px;
-    color: #fff;
-}
-
-.personagem p {
-    font-size: 0.9rem;
-    color: var(--text-soft);
-}
-
-/* HOVER */
-.personagem:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-    border: 2px solid var(--char-color);
-}
-
-/* GLOW */
-.personagem::before {
+/* brilho suave de fundo no hover */
+.card::before,
+.card-secundario::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: var(--radius);
-    pointer-events: none;
-    transition: 0.3s;
+    background: radial-gradient(circle at center, var(--char-color), transparent 70%);
+    opacity: 0;
+    transition: 0.4s ease;
+    z-index: 0;
 }
 
-.personagem:hover::before {
-    box-shadow: 0 0 30px var(--char-color);
-    opacity: 1;
+.card:hover::before,
+.card-secundario:hover::before {
+    opacity: 0.12;
 }
 
-.personagens-importantes {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(180px 1fr));
-    gap: 20px;
-    padding: 60px 20px;
+.card > *,
+.card-secundario > * {
+    position: relative;
+    z-index: 1;
 }
 
-.personagem-secundario {
-    background: #0f1624;
-    border-radius: var(--radius);
-    padding: 15px;
-    text-align: center;
-
-    transition: 0.3s;
-    border: 1px solid #1f2a3a;
+.card,
+.card-secundario {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.personagem-secundario img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    margin-top: 10px;
+.card:hover,
+.card-secundario:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
 }
 
-.personagem-secundario h3 {
-    color: var(--text);
-    margin-bottom: 5px;
+.nav a {
+    transition: 0.3s ease;
 }
 
-.personagem-secundario {
-    font-size: 0.85rem;
-    color: var(--text-soft);
+.nav a:hover {
+    transform: translateY(-2px);
+    letter-spacing: 1px;
 }
 
-/* hover mais sutil */
-.personagem-secundario:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-    box-shadow: 0 0 15px rgba(124, 58, 237, 0.2);
+.sobre-card {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.05);
+    transition: 0.3s ease;
+}
+
+.sobre-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 30px rgba(250, 204, 21, 0.1);
+}
+
+.galeria-grid img {
+    transition: 0.4s ease;
+}
+
+.galeria-grid img:hover {
+    transform: scarle(1.08);
+    filter: brightness(1.1) contrast(1.2);
 }

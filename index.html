@@ -1,175 +1,181 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fan page inspirada em Persona 4 Golden">
-    
+    <meta name="description" content="Fan page inspired by Persona 4 Golden">
     <title>Persona 4 Golden | Fan Page</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="title">
-        <h1>Persona 4 Golden / Fan Page</h1>
-    </div>
+<div class="tv-overlay"></div>
 
-    <nav class="nav">
-        <a href="#hero">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#personagens">Personagens</a>
-        <a href="#galeria">Galeria</a>
-    </nav>
+<header>
+    <div class="header-container">
+        <h1 class="logo">P4 <span>GOLDEN</span></h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#sobre">ABOUT</a></li>
+                <li><a href="#personagens">CHARACTERS</a></li>
+                <li><a href="#galeria">GALLERY</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main>
-
-    <!-- HERO -->
     <section class="hero" id="hero">
         <div class="hero-texto">
             <h2>Persona 4 Golden</h2>
-            <p>Reach out to the truth.</p>
+            <p>"Reach out to the truth."</p>
+            <div class="hero-btns">
+                <a href="#sobre" class="btn-yellow">ENTER THE TV</a>
+            </div>
         </div>
-
-        <img src="assets/hero/hero.jpg" alt="Imagem principal de Persona 4 Golden">
+        <div class="hero-img-wrapper">
+            <img src="assets/hero/hero.jpg" alt="Persona 4 Golden Main Cast">
+        </div>
     </section>
 
-    <!-- SOBRE -->
     <section class="sobre" id="sobre">
-        <h2>O que é Persona 4 Golden?</h2>
-
-        <p>
-            Persona 4 Golden is set in the small town of Inaba, where mysterious events happen inside a TV world.
-        </p>
-
-        <p>
-            Students awaken Personas, manifestations of their inner selves, to fight Shadows and uncover the truth.
-        </p>
-
-        <p>
-            The game mixes daily life, friendship and supernatural mystery.
-        </p>
+        <div class="sobre-card">
+            <h2>The Mystery of Inaba</h2>
+            <p>
+                Set in the quiet, rural town of Inaba, <strong>Persona 4 Golden</strong> begins when a series of mysterious murders occurs alongside the appearance of a strange fog. 
+                The urban legend of the "Midnight Channel" leads a group of high school students to discover a world inside the television.
+            </p>
+            <p>
+                As they navigate this dangerous dimension, they awaken their <strong>Personas</strong>—the physical manifestation of their inner selves. 
+                The game perfectly balances a deep supernatural investigation with the heartwarming daily life of a student, emphasizing that the greatest power comes from the bonds of friendship.
+            </p>
+        </div>
     </section>
 
-    <!-- PERSONAGENS PRINCIPAIS -->
-    <section class="personagens-principais" id="personagens">
+    <section class="secao-personagens" id="personagens">
+        <h2 class="titulo-secao">Investigation Team</h2>
+        <div class="grid-personagens">
+            <article class="card yu">
+                <div class="arcana">The Fool</div>
+                <h3>YU</h3>
+                <p>Calm and composed leader.</p>
+                <img src="assets/personagens/principais/yu.png" alt="Yu">
+            </article>
 
-        <article class="personagem yu">
-            <h3>YU</h3>
-            <p>Calm and composed leader.</p>
-            <img src="assets/personagens/principais/yu.png" alt="Yu">
-        </article>
+            <article class="card yosuke">
+                <div class="arcana">The Magician</div>
+                <h3>YOSUKE</h3>
+                <p>Loyal and energetic friend.</p>
+                <img src="assets/personagens/principais/yosuke.png" alt="Yosuke">
+            </article>
 
-        <article class="personagem yosuke">
-            <h3>YOSUKE</h3>
-            <p>Loyal and energetic friend.</p>
-            <img src="assets/personagens/principais/yosuke.png" alt="Yosuke">
-        </article>
+            <article class="card chie">
+                <div class="arcana">The Chariot</div>
+                <h3>CHIE</h3>
+                <p>Energetic fighter of justice.</p>
+                <img src="assets/personagens/principais/chie.png" alt="Chie">
+            </article>
 
-        <article class="personagem chie">
-            <h3>CHIE</h3>
-            <p>Energetic fighter of justice.</p>
-            <img src="assets/personagens/principais/chie.png" alt="Chie">
-        </article>
+            <article class="card yukiko">
+                <div class="arcana">The Priestess</div>
+                <h3>YUKIKO</h3>
+                <p>Gentle but strong personality.</p>
+                <img src="assets/personagens/principais/yukiko.png" alt="Yukiko">
+            </article>
 
-        <article class="personagem yukiko">
-            <h3>YUKIKO</h3>
-            <p>Gentle but strong personality.</p>
-            <img src="assets/personagens/principais/yukiko.png" alt="Yukiko">
-        </article>
+            <article class="card kanji">
+                <div class="arcana">The Emperor</div>
+                <h3>KANJI</h3>
+                <p>Tough exterior, soft heart.</p>
+                <img src="assets/personagens/principais/kanji.png" alt="Kanji">
+            </article>
 
-        <article class="personagem kanji">
-            <h3>KANJI</h3>
-            <p>Tough exterior, soft heart.</p>
-            <img src="assets/personagens/principais/kanji.png" alt="Kanji">
-        </article>
+            <article class="card rise">
+                <div class="arcana">The Lovers</div>
+                <h3>RISE</h3>
+                <p>Cheerful idol and supporter.</p>
+                <img src="assets/personagens/principais/rise.png" alt="Rise">
+            </article>
 
-        <article class="personagem rise">
-            <h3>RISE</h3>
-            <p>Cheerful idol and supporter.</p>
-            <img src="assets/personagens/principais/rise.png" alt="Rise">
-        </article>
+            <article class="card teddie">
+                <div class="arcana">The Star</div>
+                <h3>TEDDIE</h3>
+                <p>Mysterious guide of the TV world.</p>
+                <img src="assets/personagens/principais/teddie.png" alt="Teddie">
+            </article>
 
-        <article class="personagem teddie">
-            <h3>TEDDIE</h3>
-            <p>Mysterious guide of the TV world.</p>
-            <img src="assets/personagens/principais/teddie.png" alt="Teddie">
-        </article>
-
-        <article class="personagem naoto">
-            <h3>NAOTO</h3>
-            <p>Brilliant young detective.</p>
-            <img src="assets/personagens/principais/naoto.png" alt="Naoto">
-        </article>
-
+            <article class="card naoto">
+                <div class="arcana">The Fortune</div>
+                <h3>NAOTO</h3>
+                <p>Brilliant young detective.</p>
+                <img src="assets/personagens/principais/naoto.png" alt="Naoto">
+            </article>
+        </div>
     </section>
 
-    <!-- PERSONAGENS IMPORTANTES -->
-    <section class="personagens-importantes">
-
-        <article class="personagem-secundario">
+    <section class="secao-personagens">
+    <h2 class="titulo-secao">Important Figures</h2>
+    <div class="grid-personagens center-flex">
+        <article class="card-secundario dojima">
+            <div class="arcana">The Hierophant</div>
             <h3>Dojima</h3>
-            <p>A strict but caring detective raising Nanako.</p>
-            <img src="assets/personagens/importantes/dojima.png" alt="Dojima">
+            <p>Detective</p>
+            <img src="assets/personagens/importantes/dojima.png">
         </article>
-
-        <article class="personagem-secundario">
+        <article class="card-secundario nanako">
+            <div class="arcana">Justice</div>
             <h3>Nanako</h3>
-            <p>Innocent girl who brings warmth to the story.</p>
-            <img src="assets/personagens/importantes/nanako.png" alt="Nanako">
+            <p>Little Sister</p>
+            <img src="assets/personagens/importantes/nanako.png">
         </article>
-
-        <article class="personagem-secundario">
+        <article class="card-secundario marie">
+            <div class="arcana">Aeon</div>
             <h3>Marie</h3>
-            <p>Mysterious girl from the Velvet Room.</p>
-            <img src="assets/personagens/importantes/marie.png" alt="Marie">
+            <p>Poet</p>
+            <img src="assets/personagens/importantes/marie.png">
         </article>
-
-        <article class="personagem-secundario">
+        <article class="card-secundario adachi">
+            <div class="arcana">Jester</div>
             <h3>Adachi</h3>
-            <p>Detective hiding a dark truth.</p>
-            <img src="assets/personagens/importantes/adachi.png" alt="Adachi">
+            <p>Partner?</p>
+            <img src="assets/personagens/importantes/adachi.png">
         </article>
-
-        <article class="personagem-secundario">
+        <article class="card-secundario namatame">
+            <div class="arcana">The Hanged Man</div>
             <h3>Namatame</h3>
-            <p>Misunderstood figure tied to the TV world.</p>
-            <img src="assets/personagens/importantes/namatame.png" alt="Namatame">
+            <p>Desperate</p>
+            <img src="assets/personagens/importantes/namatame.png">
         </article>
-
-        <article class="personagem-secundario">
+        <article class="card-secundario mitsuo">
+            <div class="arcana">The Hermit</div>
             <h3>Mitsuo</h3>
-            <p>Student involved in tragic events.</p>
-            <img src="assets/personagens/importantes/mitsuo.png" alt="Mitsuo">
+            <p>Empty</p>
+            <img src="assets/personagens/importantes/mitsuo.png">
         </article>
-
+        </div>
     </section>
 
-    <!-- GALERIA -->
     <section class="galeria" id="galeria">
-
-        <img src="assets/galeria/inaba.jpg" alt="Inaba">
-        <img src="assets/galeria/inaba2.jpg" alt="Inaba cidade">
-        <img src="assets/galeria/pesca.jpg" alt="Pesca">
-        <img src="assets/galeria/tv.jpg" alt="TV World">
-        <img src="assets/galeria/exploracao.jpg" alt="Exploração">
-        <img src="assets/galeria/batalha.jpg" alt="Batalha">
-        <img src="assets/galeria/ultimate.jpg" alt="Momento final">
-
+        <h2 class="titulo-secao">Inaba Records</h2>
+        <div class="galeria-grid">
+            <img src="assets/galeria/inaba.jpg" alt="Inaba">
+            <img src="assets/galeria/inaba2.jpg" alt="Inaba Town">
+            <img src="assets/galeria/Escola.jpg" alt="school">
+            <img src="assets/galeria/pesca.jpg" alt="Fishing">
+            <img src="assets/galeria/tv.jpg" alt="TV World">
+            <img src="assets/galeria/exploracao.jpg" alt="Exploration">
+            <img src="assets/galeria/batalha.jpg" alt="Battle">
+            <img src="assets/galeria/persona.jpg" alt="Persona Summon">
+            <img src="assets/galeria/ultimate.jpg" alt="Final Moment">
+        </div>
     </section>
-
 </main>
 
 <footer>
-    <p>
-        © 2026 Rodrigo P. Barros — Front-end Developer <br>
-        Project inspired by Persona 4 Golden
-    </p>
-
-    <a href="https://github.com/RodrigoPBarros" target="_blank">GitHub</a>
+    <p>© 2026 Rodrigo P. Barros — Front-end Developer</p>
+    <a href="https://github.com/RodrigoPBarros" target="_blank">GITHUB</a>
 </footer>
 
 </body>
