@@ -2,7 +2,7 @@
 Landing page inspirada em Persona 4 Golden, desenvolvida com HTML e CSS para praticar layout, identidade visual e estilização temática.
 # 📺 Persona 4 Golden - Fan Page
 
-![Preview do Projeto](./assets/preview.png)
+![Preview](assets/preview.png)
 
 ## 📋 Sobre o Projeto
 Esta é uma Fan Page interativa inspirada na interface (UI) do jogo **Persona 4 Golden**. O objetivo deste projeto foi explorar técnicas avançadas de CSS, animações de entrada e a criação de uma experiência imersiva para o usuário, simulando a estética "Industrial/Yellow" característica do game.
