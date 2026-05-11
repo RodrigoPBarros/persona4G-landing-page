@@ -27,14 +27,6 @@ Você pode visualizar o projeto online através do GitHub Pages:
 
 ---
 
-## 📸 Preview da Interface
-<div align="center">
-  <!-- Substitua o caminho abaixo pela sua imagem de print -->
-  <img src="assets/seu-print-aqui.jpg" width="100%" alt="Captura de tela do projeto">
-</div>
-
----
-
 ## 👤 Autor
 **Rodrigo P. Barros**
 - GitHub: [@RodrigoPBarros](https://github.com/RodrigoPBarros)
