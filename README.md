@@ -46,4 +46,3 @@ O projeto está disponível para visualização pública através do GitHub Page
 *Desenvolvedor Front-end focado em criar experiências digitais de alta performance e interfaces imersivas.*
 
 *   **GitHub:** [@RodrigoPBarros](https://github.com/RodrigoPBarros)
-*   **LinkedIn:** [Seu Link de LinkedIn Aqui]
