@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/icons/p4g.ico" type="image/x-icon">
 </head>
 <body>
-
+<audio id="audio-click" src="assets/sounds/tv-static.mp3"></audio>
 <div class="tv-overlay"></div>
 
 <header>
@@ -29,17 +29,17 @@
 
 <main>
     <section class="hero" id="hero">
-        <div class="hero-texto">
-            <h2 id="hero-titulo">Persona 4 Golden</h2>
-            <p id="hero-frase">"Reach out to the truth."</p>
-            <div class="hero-btns">
-                <a href="#sobre" class="btn-yellow" id="hero-btn">ENTER THE TV</a>
-            </div>
+    <div class="hero-texto">
+        <h2 id="hero-titulo">Persona 4 Golden</h2>
+        <p id="hero-frase">"Reach out to the truth."</p>
+        <div class="hero-btns">
+            <a href="#sobre" class="btn-yellow" id="hero-btn">ENTER THE TV</a>
         </div>
-        <div class="hero-img-wrapper">
-            <img src="assets/hero/hero.jpg" alt="Persona 4 Golden Main Cast" id="hero-img">
-        </div>
-    </section>
+    </div>
+    <div class="hero-img-wrapper">
+        <img src="assets/hero/hero.jpg" alt="Persona 4 Golden Main Cast" id="hero-img">
+    </div>
+</section>
 
     <section class="sobre" id="sobre">
         <div class="sobre-card">
@@ -159,19 +159,32 @@
     </section>
 
     <section class="galeria" id="galeria">
-        <h2 class="titulo-secao">Inaba Records</h2>
-        <div class="galeria-grid">
-            <img src="assets/galeria/inaba.jpg" alt="Inaba">
-            <img src="assets/galeria/inaba2.jpg" alt="Inaba Town">
-            <img src="assets/galeria/Escola.jpg" alt="school">
-            <img src="assets/galeria/pesca.jpg" alt="Fishing">
-            <img src="assets/galeria/tv.jpg" alt="TV World">
-            <img src="assets/galeria/exploracao.jpg" alt="Exploration">
-            <img src="assets/galeria/batalha.jpg" alt="Battle">
-            <img src="assets/galeria/persona.jpg" alt="Persona Summon">
-            <img src="assets/galeria/ultimate.jpg" alt="Final Moment">
-        </div>
-    </section>
+    <h2 class="titulo-secao">Inaba Records</h2>
+
+    <!-- 1. Adicione os botões de controle aqui -->
+    <div class="filtros-galeria">
+        <button class="btn-filtro active" data-filter="all">ALL</button>
+        <button class="btn-filtro" data-filter="cidade">CITY</button>
+        <button class="btn-filtro" data-filter="tv-world">TV WORLD</button>
+    </div>
+
+    <div class="galeria-grid">
+        <!-- 2. Adicione as classes 'cidade' ou 'tv-world' em cada imagem -->
+        <img src="assets/galeria/inaba.jpg" class="cidade" alt="Inaba">
+        <img src="assets/galeria/inaba2.jpg" class="cidade" alt="Inaba Town">
+        <img src="assets/galeria/Escola.jpg" class="cidade" alt="school">
+        <img src="assets/galeria/pesca.jpg" class="cidade" alt="Fishing">
+        <img src="assets/galeria/marie.jpg" class="cidade" alt="talking">
+        <img src="assets/galeria/classrom.jpg" class="cidade" alt="classrom">
+
+        <img src="assets/galeria/tv.jpg" class="tv-world" alt="TV World">
+        <img src="assets/galeria/exploracao.jpg" class="tv-world" alt="Exploration">
+        <img src="assets/galeria/batalha.jpg" class="tv-world" alt="Battle">
+        <img src="assets/galeria/ultimate02.jpg" class="tv-world" alt="Battle">
+        <img src="assets/galeria/persona.jpg" class="tv-world" alt="Persona Summon">
+        <img src="assets/galeria/ultimate.jpg" class="tv-world" alt="Final Moment">
+    </div>
+</section>
 </main>
 
 <footer>
