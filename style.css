@@ -105,9 +105,9 @@ header {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 80px 20px;
+    justify-content: space-around;
+    min-height: 80vh;
+    padding: 0 10%;
 }
 
 .hero-texto h2 {
@@ -144,6 +144,18 @@ header {
     border: 5px solid var(--p4-yellow);
     box-shadow: 0 0 30px rgba(250, 204, 21, 0.3);
     object-fit: cover;
+    filter: grayscale(20%);
+    cursor: pointer;
+}
+
+#hero-btn {
+    transition: transform 0.2s, background-color 0.3s;
+    cursor: pointer;
+}
+
+#hero-btn:hover {
+    transform: scale(1.1) skew(-10deg);
+    filter: brightness(1.2);
 }
 
 .sobre {
@@ -307,6 +319,11 @@ footer a {
 /* =========================
    HERO ANIMATION (CUTSCENE)
 ========================= */
+.hero-texto {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
 
 .hero-texto h2 {
     animation: fadeUp 0.8s ease-out forwards;
@@ -323,10 +340,27 @@ footer a {
     opacity: 0;
 }
 
+.hero-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
 .hero-img-wrapper img {
-    animation: heroPop 1.2s ease-out forwards;
-    opacity: 0;
-    transform: scale(0.9);
+    width: 380px !important; 
+    height: 380px !important;
+    
+    object-fit: cover;
+    object-position: top; 
+    
+    border-radius: 50%;
+    border: 6px solid var(--char-color, #facc15);
+    box-shadow: 0 0 30px var(--char-color, rgba(250, 204, 21, 0.5));
+    
+    flex-shrink: 0; 
+    
+    transition: all 0.4s ease;
 }
 
 /* ANIMAÇÕES */
